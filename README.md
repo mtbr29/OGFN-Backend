@@ -1,10 +1,8 @@
 # Reload Backend
 
-![Imgur](https://imgur.com/L06O0IJ.png)
+![image](https://github.com/user-attachments/assets/47a391b9-9abb-4fc6-b9c1-a15a375f302a)
 
-Reload Backend is a universal Fortnite private server backend written in [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-Created by [Burlone](https://github.com/burlone0), This is a modded backend, all main backend credits to [Lawin](https://github.com/Lawin0129)
 
 ## Features
 * Locker:
@@ -57,10 +55,8 @@ Created by [Burlone](https://github.com/burlone0), This is a modded backend, all
     * [x] Chat (whispering, global chat, party chat).
     * [x] Friends.
 
-## TO-DO
-- [ ] Create a support with save the world
 
-## Discord Bot Commands
+## Discord Commands
 ### User Commands:
 - `/create {email} {username} {password}` - Creates an account on the backend (You can only create 1 account).
 - `/details` - Retrieves your account info.
@@ -98,18 +94,24 @@ Created by [Burlone](https://github.com/burlone0), This is a modded backend, all
 3) To add more gameservers you will have to do it like this `"gameServerIP": ["127.0.0.1:7777:playlist_defaultsolo", "127.0.0.1:7777:playlist_defaultduo"],`
 4) You have now added solos and duos to your matchmaking 
 
-## How to start Reload Backend
-1) Install [NodeJS](https://nodejs.org/en/) and [MongoDB](https://www.mongodb.com/try/download/community).
-2) **Download** and **Extract** Reload Backend to a safe location.
-3) Run **"install_packages.bat"** to install all the required modules.
-4) Go to **Config/config.json** in the directory you extracted Reload Backend into.
-5) Open it, set your discord bot token **(DO NOT SHARE THIS TOKEN)** and **save it**. The discord bot will be used for creating accounts and managing your account (You can disable the discord bot by entering "bUseDiscordBot" to false in "Config/config.json").
-6) Run **"start.bat"**, if there is no errors, it should work.
-7) Use something to redirect the Fortnite servers to **localhost:8080** (Which could be fiddler, ssl bypass that redirects servers, etc...)
-8) When Fortnite launches and is connected to the backend, enter your email and password (or launch with an exchange code) then press login. It should let you in and everything should be working fine.
+## how do i start the backend? (online)
+before config this: https://github.com/mtbr29/OGFN-Backend/Config/config.json
 
-## License
-This **project/backend** is licensed under the **BSD 3-Clause License.**
+
+1.Create an account on https://render.com/.
+2.Create a new web service
+3.select the same parameters:
+name: (as you want)
+region: (default)
+Repository: (your repo)
+Build Command: npm install discord-oauth2 destr cors ini axios
+Start Command: node index.js
+Auto-Deploy: yes
+4.create a secret name:token  secret:(your discord bot token)
+5 restart servive
+6.normally backend is online
+
+
 
 ## Credits
 ### Credits to:
@@ -126,4 +128,4 @@ This **project/backend** is licensed under the **BSD 3-Clause License.**
 
 ---
 
-**Reload Backend** is under continuous development and there may be errors of any kind, if you want to give advice on what to add and how to improve the project or report any errors you can do so via our [Discord](https://discord.gg/PmYMpY9thJ) server
+**OGFN Backend** is under continuous development and there may be errors of any kind, if you want to give advice on what to add and how to improve the project or report any errors you can do so via our [Discord](https://discord.gg/Sv45wd9JZA) server

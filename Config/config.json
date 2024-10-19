@@ -3,6 +3,7 @@
   "discord": {
     "bUseDiscordBot": true,
     "bot_token": ""
+    "name": "your project"
   },
   "mongodb": {
     "database": "mongodb://127.0.0.1/Reload"

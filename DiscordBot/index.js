@@ -7,7 +7,7 @@ const log = require("../structs/log.js");
 const Users = require("../model/user.js");
 
 client.once("ready", () => {
-    log.bot("Bot is up and running!");
+    log.bot("Bot is up and running! Powered by mtbr29.dev");
 
     let commands = client.application.commands;
 

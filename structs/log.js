@@ -1,6 +1,9 @@
 const fs = require("fs");
 const config = JSON.parse(fs.readFileSync("./Config/config.json").toString());
 
+// Load the project name from config
+const projectName = config.project;
+
 function getTimestamp() {
     const now = new Date();
     const date = now.toLocaleDateString('en-US');
@@ -18,36 +21,36 @@ function formatLog(prefixColor, prefix, ...args) {
 function backend(...args) {
     let msg = args.join(" ");
     if (config.bEnableFormattedLogs) {
-        formatLog("\x1b[32m", "Reload Backend Log", ...args);
+        formatLog("\x1b[32m", `${projectName} Backend Log`, ...args);
     } else {
-        console.log(`\x1b[32mReload Backend Log\x1b[0m: ${msg}`);
+        console.log(`\x1b[32m${projectName} Backend Log\x1b[0m: ${msg}`);
     }
 }
 
 function bot(...args) {
     let msg = args.join(" ");
     if (config.bEnableFormattedLogs) {
-        formatLog("\x1b[33m", "Reload Bot Log", ...args);
+        formatLog("\x1b[33m", `${projectName} Bot Log`, ...args);
     } else {
-        console.log(`\x1b[33mReload Bot Log\x1b[0m: ${msg}`);
+        console.log(`\x1b[33m${projectName} Bot Log\x1b[0m: ${msg}`);
     }
 }
 
 function xmpp(...args) {
     let msg = args.join(" ");
     if (config.bEnableFormattedLogs) {
-        formatLog("\x1b[34m", "Reload Xmpp Log", ...args);
+        formatLog("\x1b[34m", `${projectName} Xmpp Log`, ...args);
     } else {
-        console.log(`\x1b[34mReload Xmpp Log\x1b[0m: ${msg}`);
+        console.log(`\x1b[34m${projectName} Xmpp Log\x1b[0m: ${msg}`);
     }
 }
 
 function error(...args) {
     let msg = args.join(" ");
     if (config.bEnableFormattedLogs) {
-        formatLog("\x1b[31m", "Reload Error Log", ...args);
+        formatLog("\x1b[31m", `${projectName} Error Log`, ...args);
     } else {
-        console.log(`\x1b[31mReload Error Log\x1b[0m: ${msg}`);
+        console.log(`\x1b[31m${projectName} Error Log\x1b[0m: ${msg}`);
     }
 }
 
@@ -55,9 +58,9 @@ function debug(...args) {
     if (config.bEnableDebugLogs) {
         let msg = args.join(" ");
         if (config.bEnableFormattedLogs) {
-            formatLog("\x1b[35m", "Reload Debug Log", ...args);
+            formatLog("\x1b[35m", `${projectName} Debug Log`, ...args);
         } else {
-            console.log(`\x1b[35mReload Debug Log\x1b[0m: ${msg}`);
+            console.log(`\x1b[35m${projectName} Debug Log\x1b[0m: ${msg}`);
         }
     }
 }
@@ -65,9 +68,9 @@ function debug(...args) {
 function website(...args) {
     let msg = args.join(" ");
     if (config.bEnableFormattedLogs) {
-        formatLog("\x1b[36m", "Reload Website Log", ...args);
+        formatLog("\x1b[36m", `${projectName} Website Log`, ...args);
     } else {
-        console.log(`\x1b[36mReload Website Log\x1b[0m: ${msg}`);
+        console.log(`\x1b[36m${projectName} Website Log\x1b[0m: ${msg}`);
     }
 }
 
@@ -75,9 +78,9 @@ function AutoRotation(...args) {
     if (config.bEnableAutoRotateDebugLogs) {
         let msg = args.join(" ");
         if (config.bEnableFormattedLogs) {
-            formatLog("\x1b[36m", "Reload AutoRotation Debug Log", ...args);
+            formatLog("\x1b[36m", `${projectName} AutoRotation Debug Log`, ...args);
         } else {
-            console.log(`\x1b[36mReload AutoRotation Debug Log\x1b[0m: ${msg}`);
+            console.log(`\x1b[36m${projectName} AutoRotation Debug Log\x1b[0m: ${msg}`);
         }
     }
 }
@@ -85,18 +88,18 @@ function AutoRotation(...args) {
 function checkforupdate(...args) {
     let msg = args.join(" ");
     if (config.bEnableFormattedLogs) {
-        formatLog("\x1b[33m", "Reload Update Log", ...args);
+        formatLog("\x1b[33m", `${projectName} Update Log`, ...args);
     } else {
-        console.log(`\x1b[33mReload Update Log\x1b[0m: ${msg}`);
+        console.log(`\x1b[33m${projectName} Update Log\x1b[0m: ${msg}`);
     }
 }
 
 function autobackendrestart(...args) {
     let msg = args.join(" ");
     if (config.bEnableFormattedLogs) {
-        formatLog("\x1b[92m", "Reload Auto Backend Restart Log", ...args);
+        formatLog("\x1b[92m", `${projectName} Auto Backend Restart Log`, ...args);
     } else {
-        console.log(`\x1b[92mReload Auto Backend Restart\x1b[0m: ${msg}`);
+        console.log(`\x1b[92m${projectName} Auto Backend Restart\x1b[0m: ${msg}`);
     }
 }
 
